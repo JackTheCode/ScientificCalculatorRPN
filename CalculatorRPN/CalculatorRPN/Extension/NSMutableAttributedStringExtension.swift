@@ -32,7 +32,7 @@ extension NSMutableAttributedString{
 		var scriptedCharaterLocation = Int()
 		let stringFont = UIFont.boldSystemFont(ofSize: fontSize)
 		let scriptFont = UIFont.boldSystemFont(ofSize: scriptFontSize)
-		let attString = NSMutableAttributedString(string:string, attributes: [NSFontAttributeName:stringFont,NSForegroundColorAttributeName:UIColor.white,NSParagraphStyleAttributeName: paraghraphStyle])
+		let attString = NSMutableAttributedString(string:string, attributes: [NSAttributedStringKey.font:stringFont,NSAttributedStringKey.foregroundColor:UIColor.white,NSAttributedStringKey.paragraphStyle: paraghraphStyle])
 		
 		let baseLineOffset = offSet * type.rawValue
 		for (i,c) in string.characters.enumerated()
@@ -42,9 +42,9 @@ extension NSMutableAttributedString{
 				if c == aCharacter
 				{
 					scriptedCharaterLocation = i
-					attString.setAttributes([NSFontAttributeName:scriptFont,
-											 NSBaselineOffsetAttributeName:baseLineOffset,
-											 NSForegroundColorAttributeName:UIColor.white],
+					attString.setAttributes([NSAttributedStringKey.font:scriptFont,
+											 NSAttributedStringKey.baselineOffset:baseLineOffset,
+											 NSAttributedStringKey.foregroundColor:UIColor.white],
 											range:NSRange(location:scriptedCharaterLocation,
 														  length:length[theLength]))
 				}

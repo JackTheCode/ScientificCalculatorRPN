@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAEE8C6D2084FC20000FECAD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE8C6C2084FC20000FECAD /* StringExtension.swift */; };
 		DAF0AB0D203855F500EB94E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0AB0C203855F500EB94E0 /* AppDelegate.swift */; };
 		DAF0AB12203855F500EB94E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF0AB10203855F500EB94E0 /* Main.storyboard */; };
 		DAF0AB14203855F500EB94E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF0AB13203855F500EB94E0 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DAEE8C6C2084FC20000FECAD /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		DAF0AB09203855F500EB94E0 /* CalculatorRPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculatorRPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF0AB0C203855F500EB94E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAF0AB11203855F500EB94E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		DAF0AB602038606100EB94E0 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				DAEE8C6C2084FC20000FECAD /* StringExtension.swift */,
 				DAF0AB612038608000EB94E0 /* NSMutableAttributedStringExtension.swift */,
 				DAF0AB792038667A00EB94E0 /* UIColorExtenstion.swift */,
 			);
@@ -315,6 +318,7 @@
 				DAF0AB5120385DD200EB94E0 /* LinkedList.swift in Sources */,
 				DAF0AB7A2038667A00EB94E0 /* UIColorExtenstion.swift in Sources */,
 				DAF0AB4920385DA500EB94E0 /* NoActionTextField.swift in Sources */,
+				DAEE8C6D2084FC20000FECAD /* StringExtension.swift in Sources */,
 				DAF0AB24203856D400EB94E0 /* CalculatorView.swift in Sources */,
 				DAF0AB5220385DD200EB94E0 /* OperationStack.swift in Sources */,
 				DAF0AB5F2038600D00EB94E0 /* RAReorderableLayout.swift in Sources */,

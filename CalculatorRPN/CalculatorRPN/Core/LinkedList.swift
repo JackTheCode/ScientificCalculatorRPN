@@ -234,8 +234,6 @@ extension LinkedList: ExpressibleByArrayLiteral {
 
 extension LinkedList : Collection {
 	
-	
-  
   public typealias Index = LinkedListIndex<T>
   
   /// The position of the first element in a nonempty collection.

@@ -18,6 +18,7 @@ public enum OperatorType: CustomStringConvertible {
   case multiply
   case percent
   case exponent
+  case exponent_inverse
   case log
   case squareRoot
 
@@ -35,10 +36,12 @@ public enum OperatorType: CustomStringConvertible {
       return "%"
     case .exponent:
       return "^"
+    case .exponent_inverse:
+      return "1/^"
 	case .log :
-	  return "log"
+	  return "^/"
 	case .squareRoot :
-	  return "√"
+	  return "^/2"
     }
   }
 }
@@ -76,7 +79,7 @@ public struct OperatorToken: CustomStringConvertible {
       return 0
     case .divide, .multiply, .percent:
       return 5
-    case .exponent, .log, .squareRoot:
+    case .exponent, .exponent_inverse, .log, .squareRoot:
       return 10
     }
   }
@@ -85,7 +88,7 @@ public struct OperatorToken: CustomStringConvertible {
     switch operatorType {
     case .add, .subtract, .divide, .multiply, .percent:
       return .leftAssociative
-    case .exponent, .log, .squareRoot:
+    case .exponent, .exponent_inverse, .log, .squareRoot:
       return .rightAssociative
     }
   }
@@ -152,7 +155,7 @@ public struct Token: CustomStringConvertible {
 
 public class InfixExpressionBuilder {
 	
-	static let sharedInstance : InfixExpressionBuilder = {
+	static var sharedInstance : InfixExpressionBuilder = {
 		let builder = InfixExpressionBuilder()
 		return builder
 	}()
